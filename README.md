@@ -12,34 +12,51 @@ Issues
 ------
 ### Major
 
-1.   Wifi LAN
-2.   The OS could only recognize 4GB of memory
+1.   :white_check_mark: Wifi LAN: drivers and firmware supplied, not working though.
+2.   :white_check_mark: Memory: only 4GB are recognized.
 
 ### Minor
-1.   Turn-off button not configured
-
-### Unsolved
-1.  *(none)*
-
+1.   :white_check_mark: Turn-off button: not configured.
+2.  :o2: Yum is painfully slow... it feels like if it were constantly locked for tenths of seconds for any operation I do (specially in "*Finished Dependency Resolution*" but not only).
 
 Fixes
 -----
 
-The issues were very easy to fix. No 
-
-### 1. Wifi
+### 1. Wifi LAN
 
 I followed the instructions in [Fred Welland's blog](http://stupidfredtricks.blogspot.fr/2012/05/fedora-17-and-clevo-w110er-mythlogic.html):
+It boils down to do the following:
 
-1.  Download the [firmware](http://intellinuxwireless.org/iwlwifi/downloads/iwlwifi-6000g2b-ucode-18.168.6.1.tgz):
+1.  Install the [firmware](http://wireless.kernel.org/en/users/Drivers/iwlwifi):
 
-    `wget http://intellinuxwireless.org/iwlwifi/downloads/iwlwifi-6000g2b-ucode-18.168.6.1.tgz`
+        curl http://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/plain/iwlwifi-6000g2b-6.ucode > /lib/firmware/iwlwifi-6000g2b-6.ucode`
     
     Note: Fedora 17 seems already has the firmware installed, but an outdated version. It will be probably fixed in future releases.
-2.  Extract the content:   
-  
-    `tar xvfz /lib/firmware/
+    The previous command line won't work if you don't have a wired LAN connection. If don't, just copy the firmware in a USB stick or the like.
 
+2.  And reload the kernel module so that it can pick the new firmware:
+  
+        modprobe -r iwlwifi
+        modprobe iwlwifi
+
+    Once the module is started, in matter of seconds, you'll see the Network Manager working back again.
+    Reloading the module has to be done only once, after you reboot, the module and the right firmware will be 
+    loaded automatically.
+
+### 2. Memory
+
+Just install a kernel supporting Physical Address Extension (PAE):
+
+    yum install kernel-PAE.i686
+
+### 3. Turn-off button
+
+Just [configure Gnome](https://ask.fedoraproject.org/question/7521/hardware-button-shutdown/) to mangage the button:
+
+    gsettings set org.gnome.settings-daemon.plugins.power button-power hibernate
+
+I want the computer to hibernate in that case, but other options exist:
+'blank','suspend','shutdown','hibernate','interactive' or 'nothing'.
 
 Sable Complete Review
 ---------------------
@@ -47,7 +64,8 @@ Sable Complete Review
 ### Positive points
 *   Looks solid and stylish
 *   Fast and silent
+*   System76's service is very good
 
 ### Weaknesses
 *   The power transformer is quite of an ugly brick
-*   **(Fedora)** Yum is painfully slow... it feels like if it were constantly locked for tenths of seconds for any operation I do (specially in "*Finished Dependency Resolution*").
+*   European plug not supplied (not a big deal. Just be sure you buy an adapter with the ground hole).
