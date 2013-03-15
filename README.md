@@ -49,6 +49,8 @@ Just install a kernel supporting Physical Address Extension (PAE):
 
     yum install kernel-PAE.i686
 
+All the memory will be recognized after rebooting the computer.
+
 ### 3. Turn-off button
 
 Just [configure Gnome](https://ask.fedoraproject.org/question/7521/hardware-button-shutdown/) to mangage the button:
@@ -57,6 +59,8 @@ Just [configure Gnome](https://ask.fedoraproject.org/question/7521/hardware-butt
 
 I want the computer to hibernate in that case, but other options exist:
 'blank','suspend','shutdown','hibernate','interactive' or 'nothing'.
+
+The change will be applied after rebooting or logging off, I don't remember.
 
 Sable Complete Review
 ---------------------
