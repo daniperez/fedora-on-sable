@@ -64,7 +64,6 @@ The change will be applied after rebooting or logging off, I don't remember.
 
 Sable Complete Review
 ---------------------
-**(TBC)**
 ### Positive points
 *   Looks solid and stylish
 *   Fast and silent
