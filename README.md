@@ -24,7 +24,7 @@ Fixes
 
 ### 1. Wifi LAN
 
-I followed the instructions in [Fred Welland's blog](http://stupidfredtricks.blogspot.fr/2012/05/fedora-17-and-clevo-w110er-mythlogic.html):
+I followed the instructions in [Fred Welland's blog](http://stupidfredtricks.blogspot.fr/2012/05/fedora-17-and-clevo-w110er-mythlogic.html)
 It boils down to do the following:
 
 1.  Install the [firmware](http://wireless.kernel.org/en/users/Drivers/iwlwifi):
