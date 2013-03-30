@@ -12,13 +12,14 @@ Issues
 ------
 ### Major
 
-1.   :white_check_mark: ~~Wifi LAN: drivers and firmware supplied, not working though.~~
-2.   :white_check_mark: ~~Memory: only 4GB are recognized.~~
+- :white_check_mark: ~~Wifi LAN: drivers and firmware supplied, not working though.~~
+- :white_check_mark: ~~Memory: only 4GB are recognized.~~
+- :o2: Coming back from "suspend" state sometimes hangs the computer.
 
 ### Minor
 1.   :white_check_mark: ~~Turn-off button: not configured.~~
 2.   :o2: Brightness set is not kept between sessions
-3.   :o2: Yum is painfully slow... it feels like if it were constantly locked for tenths of seconds for any operation I do (specially in "*Finished Dependency Resolution*" but not only).
+3.   :white_check_mark: ~~Yum is painfully slow... it feels like if it were constantly locked for tenths of seconds for any operation I do (specially in "*Finished Dependency Resolution*" but not only).~~ Seems to be solved by last updates.
 
 Fixes
 -----
