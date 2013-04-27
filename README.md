@@ -33,7 +33,7 @@ It boils down to do the following:
 
         curl http://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/plain/iwlwifi-6000g2b-6.ucode > /lib/firmware/iwlwifi-6000g2b-6.ucode`
     
-    Note: Fedora 17 seems already has the firmware installed, but an outdated version. It will be probably fixed in future releases.
+    Note: Fedora 17 seems already have the firmware installed, but an outdated version. It will be probably fixed in future releases.
     The previous command line won't work if you don't have a wired LAN connection. If don't, just copy the firmware in a USB stick or the like.
 
 2.  And reload the kernel module so that it can pick the new firmware:
