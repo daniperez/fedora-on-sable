@@ -55,7 +55,7 @@ All the memory will be recognized after rebooting the computer.
 
 ### 3. Turn-off button
 
-Just [configure Gnome](https://ask.fedoraproject.org/question/7521/hardware-button-shutdown/) to mangage the button:
+Just [configure Gnome](https://ask.fedoraproject.org/question/7521/hardware-button-shutdown/) to manage the button:
 
     gsettings set org.gnome.settings-daemon.plugins.power button-power hibernate
 
