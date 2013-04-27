@@ -73,4 +73,4 @@ Sable Complete Review
 
 ### Weaknesses
 *   The power transformer is quite of an ugly brick
-*   European plug not supplied (not a big deal. Just be sure you buy an adapter with the ground hole).
+*   European plug not supplied (not a big deal. Just be sure you buy an adapter with a **ground hole**).
