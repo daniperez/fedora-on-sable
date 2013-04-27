@@ -14,7 +14,7 @@ Issues
 
 - :white_check_mark: ~~Wifi LAN: drivers and firmware supplied, not working though.~~
 - :white_check_mark: ~~Memory: only 4GB are recognized.~~
-- :o2: Coming back from "suspend" state sometimes hangs the computer.
+- :o2: Coming back from "hibernate" state sometimes hangs the computer.
 
 ### Minor
 1.   :white_check_mark: ~~Turn-off button: not configured.~~
