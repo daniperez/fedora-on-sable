@@ -1,3 +1,5 @@
+> This is mostly outdated. The computer has worked fine for a while. Currently on Fedora 40.
+
 [System76's Sable Complete](https://www.system76.com/desktops/model/sabc1) works almost out of the box in (at least) Fedora 17.
 
 The configuration tested is the following:
